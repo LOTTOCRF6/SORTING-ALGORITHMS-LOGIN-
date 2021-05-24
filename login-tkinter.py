@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 
 root = Tk()
-root.title("Username-password")
+root.title("Login")
 root.geometry("600x500")
 root.config(bg="lightblue")
 
