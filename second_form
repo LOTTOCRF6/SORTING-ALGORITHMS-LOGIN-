@@ -6,11 +6,6 @@ root.title("Landing_form")
 root.geometry("600x500")
 root.config(bg="Darkblue")
 myList = StringVar()
-label_username = Label(root, text="Sorted Array in Ascending Order:", bg="Darkblue")
-label_username.place(x=60, y=20)
-result = Label(root, text="", textvariable=myList)
-
-myList = [42, 12, 13, 89, 63, 11, 30]
 
 
 # Function to do insertion sort
@@ -29,8 +24,11 @@ def insertionSort(array):
         array[j + 1] = key
 
 
-insertion_button = Button(root, text="Sort", borderwidth="10", command=insertionSort, font="Consolas 15 bold", bg="Darkblue")
-insertion_button.place(x=80, y=150)
+array = [42, 12, 13, 89, 63, 11, 30]
+insertionSort(array)
+Sorted = array
+label_username = Label(root, text=Sorted)
+label_username.place(x=60, y=20)
 
 
 root.mainloop()
