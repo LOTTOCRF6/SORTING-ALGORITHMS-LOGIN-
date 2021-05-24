@@ -27,6 +27,9 @@ def my_user():
             found = True
     if found == True:
         messagebox.showinfo(title="my_output", message="Access granted")
+        root.destroy()
+        import second_form
+
     else:
         messagebox.showinfo(title="my_output", message="Access denied")
 
@@ -42,10 +45,10 @@ def exit_program():
 
 log_button = Button(root, text="Login", borderwidth="10", command=my_user, font=("Consolas 15 bold"), bg="lightblue")
 log_button.place(x=80, y=150)
-log_button = Button(root, text="clear", borderwidth="10", command=clear, font=("Consolas 15 bold"), bg="lightblue")
-log_button.place(x=240, y=150)
-log_button = Button(root, text="exit", borderwidth="10", command=exit, font=("Consolas 15 bold"), bg="lightblue")
-log_button.place(x=390, y=150)
+clear_button = Button(root, text="clear", borderwidth="10", command=clear, font=("Consolas 15 bold"), bg="lightblue")
+clear_button.place(x=240, y=150)
+exit_button = Button(root, text="exit", borderwidth="10", command=exit, font=("Consolas 15 bold"), bg="lightblue")
+exit_button.place(x=390, y=150)
 
 
 root.mainloop()
